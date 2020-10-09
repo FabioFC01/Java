@@ -21,15 +21,10 @@ public class Flower{
 
     public static void main(String [] args){
         //Dichiarazione variabili
-      //  boolean nuovo = true;
-       // String nm = "";
-        //String risposta = "";
         int pet = 0;
         float pr = 0;
         int numero = 0;
         int contatore = 0;
-        //Inizializzazione costruttore primo fiore
-      //  Flower margherita = new Flower();   //Si chiama margherita
 
         Scanner scan = new Scanner(System.in);
 
@@ -37,10 +32,7 @@ public class Flower{
         numero = scan.nextInt();
         Flower[] yeah = new Flower[numero];
 
-
-        do{
-           // System.out.println("Vuoi inserire un nuovo fiore?");
-            
+        do{            
             System.out.println("Nome");
             scan.nextLine();
             String nm = scan.nextLine();
