@@ -2,7 +2,9 @@ import java.util.Scanner;
 
 public class MakeLogin2{
     public static void main(String[] args){
+        //Apertura del flusso
         Scanner in = new Scanner(System.in);
+        
         System.out.print("Inserire il nome : ");
         String nome = in.next();
 
