@@ -21,6 +21,7 @@ public class MakeLogin2{
 
         System.out.println("La login e' : " + lg);
 
+        //Chiusura del flusso --> flow is termined
         in.close();
     }
 }
