@@ -8,7 +8,7 @@
 
 import javax.swing.JOptionPane;
 
-public class OK
+public class Hello_nome_finestra
 {
     public static void main(String[] args)
     {
