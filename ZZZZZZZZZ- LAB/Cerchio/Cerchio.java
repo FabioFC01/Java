@@ -8,7 +8,8 @@ public class Cerchio{
 
         //calcolo
         circonferenza = 2.0* raggio * pi;
-        area = raggio*raggio*pi;
+        //uguale a raggio*raggio*pi;
+        area = Math.pow(raggio, 2) * Math.PI;
 
         //output
         System.out.println("La circonferenza del cerchio di raggio " + raggio + " e' : " + circonferenza);
