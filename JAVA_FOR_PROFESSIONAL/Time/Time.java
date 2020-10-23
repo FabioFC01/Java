@@ -4,6 +4,7 @@ import java.time.temporal.ChronoUnit;
 
 public class Time {
     public static void main(String[] args) {
+        String format = "%-8.8s";
 
         //Varie zone
         ZoneId zone1 = ZoneId.of("Europe/Berlin");
@@ -38,9 +39,9 @@ public class Time {
         System.out.println("Current Time : " + ora);
         System.out.println("---------------------------");
         System.out.println();
-        System.out.println("Time between 9 istuctions in microseconds  :  " + durationCommands);
-        System.out.println("Time between 9 istuctions in milliseconds  :  " + durationCommands/1000);
-        System.out.println("Time between 9 istuctions in seconds       :  " + durationCommands/1000000);
+        System.out.println( "Time between 9 istuctions in microseconds  :  " + durationCommands);
+        System.out.println( "Time between 9 istuctions in milliseconds  :  " + durationCommands/1000);
+        System.out.println( "Time between 9 istuctions in seconds       :  " + durationCommands/1000000);
 
 
 
