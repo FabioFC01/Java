@@ -26,7 +26,7 @@ public class Time {
         long hoursBetween = ChronoUnit.HOURS.between(now2, now1);
 
         //Output
-        System.out.println("Minutes Between Berlin and Brazil : " + minutesBetween +"mins");
+        System.out.println("Minutes Between Berlin and Brazil : " + minutesBetween +" mins");
         System.out.println("Hours between Berlin and Brasil   : " + hoursBetween ) ;
 
         //Prende l'ora dopo qualche comando
