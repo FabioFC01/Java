@@ -33,9 +33,9 @@ public class MaxSottostringa {
             for(int j = 0; j < corta.length() -1; j++){
                 //scorre con j la stringa corta
                 contatore++;
-                if (lunga.substring(i, i+2).equals(corta.substring(j, j+2))){
+                if (lunga.substring(i, i+1).equals(corta.substring(j, j+1))){
                     //si entra qui se abbiamo trovato una stringa di due lettere uguale
-                    for (int k = 2; k <= corta.length(); k++){
+                    for (int k = 1; k <= corta.length(); k++){
                         //con k guarda le stringhe più lunghe di 2
                         contatore++;
                         if(((i+k) <= lunga.length())  && ((j+k) <= corta.length()) ){
