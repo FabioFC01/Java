@@ -178,6 +178,7 @@ public class StudentSortedContainer implements Container {
         while(in.hasNextLine()){
             test.add(in.nextLine(), ":");
         }
+        in.close();
 
         System.out.println(test.isEmpty()); //false
         System.out.println(test.size());    // 7
