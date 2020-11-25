@@ -13,8 +13,8 @@ public class TextContainer implements Container {
 
     //second costructor
     public TextContainer(java.util.Scanner reader, java.lang.String delimiter) {
-        this();
-
+        this();	//richiama il costruttore senza argomenti
+	
         reader.useDelimiter("[" + delimiter + "]+");
         while(reader.hasNext()){
             this.add(reader.next());
