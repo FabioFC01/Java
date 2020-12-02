@@ -80,7 +80,7 @@ public class MyVectorGenerics <E>  implements Container  {
    }
 
    public Object[] toArray () {
-       Object [] temp = new Object [aSize+1];
+       Object [] temp = new Object [aSize];
        for(int i = 0; i < aSize; i++){
            temp[i] = dati[i];
        }
@@ -95,7 +95,7 @@ public class MyVectorGenerics <E>  implements Container  {
         return temp;
    }
 
-   public void add(E e, int index) {
+   public void add(int index, E e) {
        if (index < 0 || index > aSize ||e == null){
            return;
        }
@@ -111,7 +111,7 @@ public class MyVectorGenerics <E>  implements Container  {
    }
 
    public void add (E e){
-       add(e, aSize);
+       add(aSize, e);
    }
 
    public void ridimensiona () {
