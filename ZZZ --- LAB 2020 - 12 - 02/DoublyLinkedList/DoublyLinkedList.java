@@ -1,17 +1,20 @@
 public class DoublyLinkedList implements Container{
     //variabili d'esemplare
     private ListNode head, tail;
+    private int listSize;
 
     public DoublyLinkedList(){
         //costruttore
         head = new ListNode();
         tail = new ListNode(null, null, head);
         head.setNext(tail);
+        listSize = 0;
      }
 
     public void makeEmpty(){
         head.setNext(tail);
         tail.setPrev(head);
+        listSize = 0;
     } // O(1)
     public boolean isEmpty(){
         return (head.getNext() == tail) && (tail.getPrev() == head);
@@ -32,6 +35,8 @@ public class DoublyLinkedList implements Container{
         ListNode newNode = new ListNode(null, head, null);
         //il nuovo nodo diventa head
         head = newNode;
+        //incremento
+        listSize++;
     } // O(1)
     
     public Object removeFirst() {
@@ -44,6 +49,8 @@ public class DoublyLinkedList implements Container{
         //imposta il riferimento di quello
         //che prima era 2° e ora è 1°
         (head.getNext()).setPrev(head);
+        //decremento
+        listSize--;
         return temp;
     } // O(1)
 
@@ -54,6 +61,8 @@ public class DoublyLinkedList implements Container{
         ListNode newNode = new ListNode(null, null, tail);
         //il nuovo nodo diventa tail
         tail = newNode;
+        //incremento
+        listSize++;
     } // O(1)
 
     public Object removeLast(){
@@ -67,18 +76,14 @@ public class DoublyLinkedList implements Container{
         //toglie il riferimento
         //al tail di prima
         tail.setNext(null);
+        //decremento
+        listSize--;
         return temp;
     } // O(1)
 
     public int size (){
-        int contatore = 0;
-        ListNode temp = new ListNode(null, head.getNext(), null);
-        while((temp.getNext()).getNext() != null){
-            temp.setElement((temp.getNext()).getNext());
-            contatore++;
-        }
-        return contatore;
-    } //O(n)
+        return listSize;
+    } //O(1)
 
 
     //ListNode

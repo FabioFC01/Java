@@ -68,7 +68,7 @@ public class DoublyLinkedListTester
 
       //Inserimento dati: prova del metodo addLast()
       for (int i = 0; i < n; i++)
-         v.addLast(new Integer( n - i));
+         v.addLast(new Integer (n-i));
 
       // prova del metodo size()
       System.out.println("\n*** addLast() e size(): DATI INSERITI PARI A " + v.size() + "***");
@@ -80,6 +80,104 @@ public class DoublyLinkedListTester
 
       // prova del metodo size()
       System.out.println("\n*** removeLast() e size(): DATI INSERITI PARI A " + v.size() + "***");
+      
 
+
+
+
+      //qui comincio io
+      System.out.println();
+      System.out.println();
+
+      DoublyLinkedList vi = new DoublyLinkedList();
+      vi.addLast("Ciao");
+      vi.addLast("Tua madre");
+      vi.addLast("É");
+      vi.addLast("Super simpatica");
+      vi.addFirst("Messaggio al primo posto");
+      vi.addFirst("No scherzo sono io al primo posto");
+
+      System.out.println(vi.size());     //6 --- YES
+      System.out.println(vi.isEmpty()); //false
+      System.out.println(vi.getFirst());    //"No scherzo sono io al primo posto"
+      //fin qui funziona
+
+      System.out.println(vi.getLast()); //Super simpatica
+      //funziona
+
+      vi.removeFirst(); //"No scherzo sono io al primo posto"
+      System.out.println(vi.getFirst()); //"Messaggio al primo posto" --- YES
+      vi.removeLast(); //Super simpatica
+      System.out.println(vi.getLast()); //É  --- YES
+
+      vi.makeEmpty();
+      System.out.println(vi.getFirst()); //null ---
+      System.out.println(vi.getLast());  //null --- YES
+      System.out.println(vi.size()); //0 --- YES
+
+      vi.addFirst(7);
+      System.out.println(vi.getFirst()); //7 ---
+      System.out.println(vi.getLast());  //7 --- YES
+      System.out.println(vi.size());     //1 --- YES
+
+      System.out.println();
+      vi.addFirst("Tua madre");
+      System.out.println(vi.size());     //2
+      System.out.println(vi.getFirst()); //Tua madre
+      System.out.println(vi.getLast());  //7
+
+      //Funziona tutto
    }
 }
+
+/*
+PS D:\Fabio\File\Java\Java\ZZZ --- LAB 2020 - 12 - 02\DoublyLinkedList> java DoublyLinkedListTester 7 
+
+*** addFirst() e size(): DATI INSERITI PARI A 7***
+
+*** getFirst(): DATO IN TESTA 6***
+
+*** getLast(): DATO IN CODA 0***
+
+*** DATI INSERITI ***
+removeFirst(): 6
+removeFirst(): 5
+removeFirst(): 4
+removeFirst(): 3
+removeFirst(): 2
+removeFirst(): 1
+removeFirst(): 0
+
+*** removeFirst() e size(): DATI contenuti A 0***
+
+*** addLast() e size(): DATI INSERITI PARI A 7***
+
+*** DATI ESTRATTI ***
+removeLast(): 1
+removeLast(): 2
+removeLast(): 3
+removeLast(): 4
+removeLast(): 5
+removeLast(): 6
+removeLast(): 7
+
+*** removeLast() e size(): DATI INSERITI PARI A 0***
+
+
+6
+false
+No scherzo sono io al primo posto
+Super simpatica
+Messaggio al primo posto
+Ã?
+null
+null
+0
+7
+7
+1
+
+2
+Tua madre
+7
+*/
