@@ -87,7 +87,7 @@ public class DoublyLinkedList implements Container{
 
 
     //ListNode
-    public class ListNode {
+    private class ListNode {
         private Object element;
         private ListNode next; //stranezza
         private ListNode prev;
