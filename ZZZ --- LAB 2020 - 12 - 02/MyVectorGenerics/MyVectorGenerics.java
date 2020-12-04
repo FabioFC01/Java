@@ -121,6 +121,4 @@ public class MyVectorGenerics <E>  implements Container  {
         }
         dati = temp;
    }
-
-
 }

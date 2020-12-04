@@ -1,12 +1,12 @@
-public class DoublyLinkedList implements Container{
+public class DoublyLinkedList <E> implements Container{
     //variabili d'esemplare
-    private ListNode head, tail;
+    private ListNode <E> head, tail;
     private int listSize;
 
     public DoublyLinkedList(){
         //costruttore
-        head = new ListNode();
-        tail = new ListNode(null, null, head);
+        head = new ListNode <>();
+        tail = new ListNode <> (null, null, head);
         head.setNext(tail);
         listSize = 0;
      }
@@ -20,19 +20,19 @@ public class DoublyLinkedList implements Container{
         return (head.getNext() == tail) && (tail.getPrev() == head);
     } // O(1)
 
-    public Object getFirst(){
-        return (head.getNext()).getElement();
+    public E getFirst(){
+        return (E)(head.getNext()).getElement();
     } // O(1)
 
     public Object getLast() {
         return (tail.getPrev()).getElement();
     } // O(1)
 
-    public void addFirst(Object obj) {
+    public void addFirst(E obj) {
         //metto obj in head attuale
-        head.setElement(obj);
+        head.setElement((E)obj);
         //creazione nuovo nodo
-        ListNode newNode = new ListNode(null, head, null);
+        ListNode <E> newNode = new ListNode <> (null, head, null);
         //il nuovo nodo diventa head
         head = newNode;
         //incremento
@@ -54,20 +54,20 @@ public class DoublyLinkedList implements Container{
         return temp;
     } // O(1)
 
-    public void addLast(Object obj) {
+    public void addLast(E obj) {
         //assegna obj a tail
         tail.setElement(obj);
         //creazione nuovo nodo
-        ListNode newNode = new ListNode(null, null, tail);
+        ListNode <E> newNode = new ListNode <> (null, null, tail);
         //il nuovo nodo diventa tail
         tail = newNode;
         //incremento
         listSize++;
     } // O(1)
 
-    public Object removeLast(){
+    public E removeLast(){
         //si prende il valore di last
-        Object temp = (tail.getPrev()).getElement();
+        E temp = (E)(tail.getPrev()).getElement();
         //si toglie il valore di last
         (tail.getPrev()).setElement(null);
         //tail diventa last
@@ -87,12 +87,12 @@ public class DoublyLinkedList implements Container{
 
 
     //ListNode
-    private class ListNode {
-        private Object element;
-        private ListNode next; //stranezza
-        private ListNode prev;
+    private static class ListNode <E> {
+        private E element;
+        private ListNode <E> next; //stranezza
+        private ListNode <E> prev;
 
-        public ListNode(Object e, ListNode n, ListNode p) {
+        public ListNode(E e, ListNode <E> n, ListNode <E> p) {
             element = e;
             next = n;
             prev = p;
@@ -102,10 +102,10 @@ public class DoublyLinkedList implements Container{
         }
 
         public Object getElement() { return element; }
-        public ListNode getNext() { return next; }
-        public ListNode getPrev() { return prev; }
-        public void setElement(Object e) { element = e; }
-        public void setNext(ListNode n) { next = n; }
-        public void setPrev(ListNode p) { prev = p; }
+        public ListNode <E> getNext() { return next; }
+        public ListNode <E> getPrev() { return prev; }
+        public void setElement(E e) { element = e; }
+        public void setNext(ListNode <E> n) { next = n; }
+        public void setPrev(ListNode <E> p) { prev = p; }
         }
 }

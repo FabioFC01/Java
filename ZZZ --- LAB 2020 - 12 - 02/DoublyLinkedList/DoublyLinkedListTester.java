@@ -83,8 +83,6 @@ public class DoublyLinkedListTester
       
 
 
-
-
       //qui comincio io
       System.out.println();
       System.out.println();
@@ -126,18 +124,38 @@ public class DoublyLinkedListTester
       System.out.println(vi.getFirst()); //Tua madre
       System.out.println(vi.getLast());  //7
 
-      //Funziona tutto
+     
+
+      //test con parametri
+      System.out.println();
+      System.out.println();
+
+      //questo ha i parametri
+      DoublyLinkedList <String> v2 = new DoublyLinkedList <String> ();
+      v2.addLast("1");
+      v2.addLast("2");
+      v2.addLast("3");
+      v2.addLast("4");
+      v2.addLast("5");
+
+      System.out.println(v2.getFirst()); //1
+      System.out.println(v2.getLast());   //5
+      System.out.println(v2.size()); //5
+      System.out.println(v2.isEmpty()); //false
+
+      String temp = v2.getFirst();
+      System.out.println(temp); //1
    }
 }
 
 /*
-PS D:\Fabio\File\Java\Java\ZZZ --- LAB 2020 - 12 - 02\DoublyLinkedList> java DoublyLinkedListTester 7 
+java DoublyLinkedListTester 7    
 
 *** addFirst() e size(): DATI INSERITI PARI A 7***
 
 *** getFirst(): DATO IN TESTA 6***
 
-*** getLast(): DATO IN CODA 0***
+*** getLast(): DATO IN CODA 0***  
 
 *** DATI INSERITI ***
 removeFirst(): 6
@@ -180,4 +198,11 @@ null
 2
 Tua madre
 7
+
+
+1
+5
+5
+false
+1
 */
