@@ -24,8 +24,8 @@ public class DoublyLinkedList <E> implements Container{
         return (E)(head.getNext()).getElement();
     } // O(1)
 
-    public Object getLast() {
-        return (tail.getPrev()).getElement();
+    public E getLast() {
+        return (E)(tail.getPrev()).getElement();
     } // O(1)
 
     public void addFirst(E obj) {
@@ -39,9 +39,9 @@ public class DoublyLinkedList <E> implements Container{
         listSize++;
     } // O(1)
     
-    public Object removeFirst() {
+    public E removeFirst() {
         //prendi oggetto di First
-        Object temp = (head.getNext()).getElement();
+        E temp = (E)(head.getNext()).getElement();
         //head diventa il primo nodo
         head = head.getNext();
         //togli il valore di head
@@ -101,7 +101,7 @@ public class DoublyLinkedList <E> implements Container{
             this(null, null, null);
         }
 
-        public Object getElement() { return element; }
+        public E getElement() { return element; }
         public ListNode <E> getNext() { return next; }
         public ListNode <E> getPrev() { return prev; }
         public void setElement(E e) { element = e; }
