@@ -134,6 +134,59 @@ public class ArraySet <E extends Comparable> implements Set {
       }
 
    }
+
+
+   //OPERAZIONI SU INSIEMI 
+
+
+   //UNIONE
+   public static ArraySet union (ArraySet s1, ArraySet s2) {
+      ArraySet <Comparable> rit = new ArraySet <Comparable> ();
+
+      Object [] s1A = s1.toArray();
+      Object [] s2A = s2.toArray(); 
+
+      for (int i = 0; i < s1A.length; i++) {
+         rit.add((Comparable)s1A[i]);
+      }
+
+      for (int i = 0; i < s2A.length; i++) {
+         rit.add((Comparable)s2A[i]);
+      }
+
+      return rit;
+   }
+
+   //INTERSEZIONE
+   //elementi presenti nel primo e nel secondo
+   public static ArraySet intersection (ArraySet s1, ArraySet s2) {
+      ArraySet <Comparable> rit = new ArraySet <Comparable> ();
+
+      Object [] v = s1.toArray();
+
+      for (int i = 0; i < v.length; i++) {
+         if (s2.contains(v[i])){
+            rit.add((Comparable)v[i]);
+         }
+      }
+
+      return rit;
+   }
+
+   //SOTTRAZIONE
+   //elementi che appartengono al primo ma non al secondo
+   public static ArraySet subtract (ArraySet s1, ArraySet s2) {
+      ArraySet <Comparable> rit = new ArraySet <Comparable> ();
+
+      Object [] v = s1.toArray();
+
+      for (int i = 0; i < v.length; i++) {
+         if (!s2.contains(v[i])){
+            rit.add((Comparable)v[i]);
+         }
+      }
+      return rit;
+   }
    
    
 }

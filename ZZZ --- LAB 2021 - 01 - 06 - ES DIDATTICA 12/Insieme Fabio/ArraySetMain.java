@@ -17,7 +17,20 @@ public class ArraySetMain {
       String [] ordinato = new String [ar.size()];
       int boh = ar.toSortedArray(ordinato);
 
-      System.out.println("ciaone");
+      //Secondo set
+      ArraySet <String> ar1 = new ArraySet <String> ();
 
+      ar1.add("A");
+      ar1.add("Z");
+      ar1.add("D");
+      // A B D
+
+
+
+      //terzo set
+      ArraySet <String> ar2 = ArraySet.subtract(ar, ar1);
+
+
+      System.out.println("ciaone");
    }
 }
