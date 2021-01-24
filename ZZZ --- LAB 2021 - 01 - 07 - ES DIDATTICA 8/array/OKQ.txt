@@ -1,0 +1,4 @@
+***size = 7
+***toArray = uva pera pera mora mora mela fico 
+***front + dequeue = uva/uva pera/pera pera/pera mora/mora mora/mora mela/mela fico/fico 
+***size = 0

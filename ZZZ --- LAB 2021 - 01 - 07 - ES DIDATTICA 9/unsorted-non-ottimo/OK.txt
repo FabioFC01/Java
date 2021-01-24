@@ -1,0 +1,8 @@
+SIZE = 7
+ENTRIES: british/london easyjet/london norwegian/oslo ryanair/dublin 
+vueling/barcelona wingsair/berlin wizzair/warshaw 
+VALUES: london london oslo dublin barcelona berlin warshaw 
+VALUESET: barcelona berlin dublin london oslo warshaw 
+REMOVE: british/london easyjet/london norwegian/oslo ryanair/dublin
+vueling/barcelona wingsair/berlin wizzair/warshaw 
+SIZE = 0

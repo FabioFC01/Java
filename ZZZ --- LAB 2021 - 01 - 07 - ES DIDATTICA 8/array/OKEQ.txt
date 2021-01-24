@@ -1,0 +1,3 @@
+***toSortedArray = fico mela mora mora pera pera uva 
+***getOnlyUniqueElements = fico mela uva 
+***split = uva mora fico | pera mora | pera mela |
