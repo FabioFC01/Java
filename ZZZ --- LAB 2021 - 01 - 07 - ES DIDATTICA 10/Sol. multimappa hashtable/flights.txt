@@ -1,0 +1,7 @@
+London#Boston
+Amsterdam#Philadelphia
+Madrid#Caracas
+Paris#Rio
+Madrid#Montevideo
+London#Seattle
+Paris#Boston

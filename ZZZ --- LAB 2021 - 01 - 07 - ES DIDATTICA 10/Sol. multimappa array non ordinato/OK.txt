@@ -1,0 +1,18 @@
+SIZE: 7
+
+FINDALL: 
+Amsterdam + Philadelphia
+London + Boston + Seattle
+Madrid + Caracas + Montevideo
+Paris + Rio + Boston
+
+VALUESET: 
+Boston Caracas Montevideo Philadelphia Rio Seattle 
+
+REMOVEALL: 
+Amsterdam + Philadelphia
+London + Boston + Seattle
+Madrid + Montevideo + Caracas
+Paris + Rio + Boston
+
+SIZE: 0
