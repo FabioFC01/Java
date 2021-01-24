@@ -1,0 +1,11 @@
+SIZE S1/S2 = 3/4
+ELEMENTS S1 = Charlie Bravo Alpha 
+ELEMENTS S2 = Delta Charlie Bravo Alpha 
+SORTED ELEMENTS S1 = Alpha Bravo Charlie 
+SORTED ELEMENTS S2 = Alpha Bravo Charlie Delta 
+S1 PRECEDES S2
+S1 EQUALS S3
+SUBSET S4 MISSING Delta: Charlie Bravo Alpha 
+REMOVED = Delta Alpha Bravo Charlie 
+SIZE: 0
+MIN S1: Alpha
