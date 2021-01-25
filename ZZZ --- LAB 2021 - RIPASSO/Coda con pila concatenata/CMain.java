@@ -28,5 +28,9 @@ public class CMain {
 
       //funzica
 
+      System.out.println("Casa bianca".compareTo("Casabianca") < 0);
+      System.out.println("Casa Bianca".compareTo("Casa bianca") < 0);
+
+
    }
 }
